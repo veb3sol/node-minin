@@ -13,7 +13,7 @@ const fs = require('fs')
 // })
 // mkdir - 2 параметра: 
 // 1 -- путь к новой папке с указанием ее названия
-// 2 -- callback - который аргументом принимает ошибку
+// 2 -- callback - который аргументом принимает ошибку - который сработает после попытки создать папку
 
 // Создаем файл
 // fs.writeFile(
@@ -63,8 +63,8 @@ const fs = require('fs')
 
 // Переименование файла
 fs.rename(
-    path.join(__dirname, 'notes', 'mynotes.txt'),
     path.join(__dirname, 'notes', 'notes.txt'),
+    path.join(__dirname, 'notes', 'notes2.txt'),
     err => {
         if(err) throw err
         console.log('файл переименован!')
